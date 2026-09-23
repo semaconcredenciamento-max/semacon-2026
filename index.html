@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3ª SEMACON 2026 | Semana Acadêmica de Contabilidade - UFAC</title>
+    <meta name="description" content="3ª Semana Acadêmica de Contabilidade da UFAC — SEMACON 2026. Tema: Auditoria e Perícia Contábil: Conectando Conhecimentos e Práticas Profissionais. 03 a 07 de Novembro em Rio Branco - Acre.">
+    
+    <!-- Open Graph for Social Media Sharing -->
+    <meta property="og:title" content="3ª SEMACON 2026 — Semana Acadêmica de Contabilidade (UFAC)">
+    <meta property="og:description" content="Auditoria e Perícia Contábil: Conectando Conhecimentos e Práticas Profissionais. Participe de 03 a 07 de Novembro de 2026 na UFAC.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts: Roboto Slab for bold editorial headers & Inter for UI readability -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        semacon: {
+                            DEFAULT: '#B00060',
+                            dark: '#8F004D',
+                            medium: '#C00070',
+                            light: '#E7A6C5',
+                            soft: '#F8EAF1',
+                            paper: '#F5F3F1',
+                            darkslate: '#111111',
+                            charcoal: '#333333',
+                            grayborder: '#D9D9D9'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Roboto Slab"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'editorial': '6px 6px 0px #111111',
+                        'editorial-sm': '3px 3px 0px #111111',
+                        'editorial-magenta': '6px 6px 0px #8F004D',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #F5F3F1;
+            color: #111111;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Subtle tactile paper texture overlay */
+        .paper-texture {
+            background-image: radial-gradient(rgba(17, 17, 17, 0.04) 0.75px, transparent 0.75px);
+            background-size: 16px 16px;
+        }
+
+        /* Slanted paper banner styling inspired by official artwork */
+        .slanted-banner {
+            transform: rotate(-2.5deg);
+        }
+        
+        .slanted-banner-reverse {
+            transform: rotate(2deg);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F5F3F1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #B00060;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8F004D;
+        }
+
+        .modal-active {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="paper-texture antialiased selection:bg-semacon selection:text-white">
+
+    <!-- HEADER / NAVIGATION -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-gray-300/60 bg-[#F5F3F1]/90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo Brand Block -->
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <div class="bg-semacon text-white px-2.5 py-1 font-serif font-black text-xl tracking-tighter border border-black shadow-editorial-sm group-hover:bg-semacon-dark transition-colors">
+                    3º
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif font-black text-lg tracking-tight leading-none text-semacon-darkslate group-hover:text-semacon transition-colors">SEMACON</span>
+                    <span class="text-[10px] font-semibold tracking-widest text-semacon-charcoal uppercase">UFAC • 2026</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold tracking-wide uppercase text-semacon-charcoal">
+                <a href="#inicio" class="hover:text-semacon transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-semacon hover:after:w-full after:transition-all">Início</a>
+                <a href="#sobre" class="hover:text-semacon transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-semacon hover:after:w-full after:transition-all">O Evento</a>
+                <a href="#programacao" class="hover:text-semacon transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-semacon hover:after:w-full after:transition-all">Programação</a>
+                <a href="#palestrantes" class="hover:text-semacon transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-semacon hover:after:w-full after:transition-all">Palestrantes</a>
+                <a href="#oficinas" class="hover:text-semacon transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-semacon hover:after:w-full after:transition-all">Oficinas</a>
+                <a href="#localizacao" class="hover:text-semacon transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-semacon hover:after:w-full after:transition-all">Local</a>
+                <a href="#faq" class="hover:text-semacon transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-semacon hover:after:w-full after:transition-all">FAQ</a>
+            </nav>
+
+            <!-- Registration CTA Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="https://script.google.com/macros/s/AKfycbw_A65IcJciw4kSjk2ULmWSbghsnzv4rDzgA5SE2ilrGNS6b9ToDkTYxL8ma7FQwSmW/exec" target="_blank" rel="noopener noreferrer" class="bg-semacon text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 border border-black shadow-editorial hover:bg-semacon-dark hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all flex items-center gap-2">
+                    <span>INSCREVA-SE</span>
+                    <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-semacon-darkslate hover:text-semacon focus:outline-none" aria-label="Abrir menu mobile">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#F5F3F1] border-b border-black px-6 py-6 space-y-4 shadow-xl">
+            <a href="#inicio" class="mobile-link block font-serif font-bold text-lg text-semacon-darkslate hover:text-semacon">Início</a>
+            <a href="#sobre" class="mobile-link block font-serif font-bold text-lg text-semacon-darkslate hover:text-semacon">O Evento</a>
+            <a href="#programacao" class="mobile-link block font-serif font-bold text-lg text-semacon-darkslate hover:text-semacon">Programação</a>
+            <a href="#palestrantes" class="mobile-link block font-serif font-bold text-lg text-semacon-darkslate hover:text-semacon">Palestrantes</a>
+            <a href="#oficinas" class="mobile-link block font-serif font-bold text-lg text-semacon-darkslate hover:text-semacon">Oficinas</a>
+            <a href="#localizacao" class="mobile-link block font-serif font-bold text-lg text-semacon-darkslate hover:text-semacon">Local</a>
+            <a href="#faq" class="mobile-link block font-serif font-bold text-lg text-semacon-darkslate hover:text-semacon">Perguntas Frequentes</a>
+            <a href="#certificados" class="mobile-link block font-serif font-bold text-lg text-semacon-darkslate hover:text-semacon">Certificados</a>
+            <div class="pt-2">
+                <a href="https://script.google.com/macros/s/AKfycbw_A65IcJciw4kSjk2ULmWSbghsnzv4rDzgA5SE2ilrGNS6b9ToDkTYxL8ma7FQwSmW/exec" target="_blank" rel="noopener noreferrer" class="w-full bg-semacon text-white text-center font-bold uppercase tracking-wider py-3 border border-black shadow-editorial block">
+                    Garantir Vaga — Inscreva-se
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden relative border-b border-black/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Content Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    
+                    <!-- Event Subtitle Tag -->
+                    <div class="inline-flex items-center gap-2 bg-white border border-black px-3 py-1 shadow-editorial-sm text-xs font-bold tracking-widest text-semacon-dark uppercase">
+                        <span class="w-2 h-2 rounded-full bg-semacon animate-pulse"></span>
+                        SEMACON — 2026 • UFAC
+                    </div>
+
+                    <!-- Main Hero Headlines -->
+                    <div>
+                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-black text-semacon-darkslate tracking-tight leading-[1.08]">
+                            3ª SEMACON
+                        </h1>
+                        <p class="font-serif text-xl sm:text-2xl font-bold text-semacon uppercase tracking-wide mt-1">
+                            Semana Acadêmica de Contabilidade
+                        </p>
+                    </div>
+
+                    <!-- Editorial Theme Box -->
+                    <div class="bg-white border-l-4 border-semacon p-5 shadow-sm border-t border-r border-b border-black/10">
+                        <span class="text-xs font-bold uppercase tracking-widest text-semacon-dark block mb-1">TEMA CENTRAL:</span>
+                        <h2 class="font-serif text-2xl sm:text-3xl font-extrabold text-semacon-darkslate leading-snug">
+                            “Auditoria e Perícia Contábil: Conectando Conhecimentos e Práticas Profissionais”
+                        </h2>
+                    </div>
+
+                    <!-- Date & Location Metadata Bar -->
+                    <div class="flex flex-wrap items-center gap-y-3 gap-x-6 text-sm font-semibold text-semacon-charcoal">
+                        <div class="flex items-center gap-2 bg-semacon-soft px-3 py-1.5 border border-semacon-light rounded">
+                            <i data-lucide="calendar" class="w-4 h-4 text-semacon"></i>
+                            <span>03 a 07 de Novembro de 2026</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-3 py-1.5 border border-black/20 rounded">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-semacon"></i>
+                            <span>Anfiteatro Garibaldi Brasil — UFAC</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="pt-4 flex flex-wrap gap-4 items-center">
+                        <a href="https://script.google.com/macros/s/AKfycbw_A65IcJciw4kSjk2ULmWSbghsnzv4rDzgA5SE2ilrGNS6b9ToDkTYxL8ma7FQwSmW/exec" target="_blank" rel="noopener noreferrer" class="bg-semacon text-white text-sm font-bold uppercase tracking-wider px-8 py-4 border border-black shadow-editorial hover:bg-semacon-dark hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all flex items-center gap-3">
+                            <span>Fazer Inscrição Gratuita</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        
+                        <a href="#programacao" class="bg-white text-semacon-darkslate hover:text-semacon text-sm font-bold uppercase tracking-wider px-7 py-4 border border-black shadow-editorial hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all flex items-center gap-2">
+                            <i data-lucide="list-checks" class="w-4 h-4"></i>
+                            <span>Ver Programação</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right Column: Graphic Composition inspired by Official Brand Artwork -->
+                <div class="lg:col-span-5 relative mt-8 lg:mt-0">
+                    <div class="relative w-full max-w-md mx-auto">
+                        
+                        <!-- Slanted Magenta Main Ribbon Cutout -->
+                        <div class="slanted-banner bg-semacon border-2 border-black p-8 text-white shadow-editorial relative overflow-hidden">
+                            
+                            <!-- Subtle Lion & Caduceus Vector Watermark SVG -->
+                            <div class="absolute -right-10 -bottom-10 opacity-15 pointer-events-none">
+                                <svg width="240" height="240" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+
+                            <div class="relative z-10 space-y-4">
+                                <div class="bg-white text-semacon-darkslate p-4 border border-black shadow-editorial-sm inline-block">
+                                    <div class="flex items-center gap-3">
+                                        <span class="font-serif font-black text-5xl md:text-6xl leading-none text-semacon">3º</span>
+                                        <div class="border-l-2 border-black/20 pl-3">
+                                            <p class="font-serif font-extrabold text-sm uppercase leading-tight">SEMACON - UFAC</p>
+                                            <p class="text-[11px] font-bold text-semacon uppercase tracking-wider">Edição 2026</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="border-t border-white/30 pt-3">
+                                    <p class="font-serif font-bold text-lg uppercase tracking-wide">
+                                        AUDITORIA & PERÍCIA CONTÁBIL
+                                    </p>
+                                    <p class="text-xs text-white/90 italic mt-1">
+                                        "Conectando Conhecimentos e Práticas Profissionais"
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Paper Badge Sticker Overlay -->
+                        <div class="absolute -bottom-6 -left-4 bg-white border border-black p-3 shadow-editorial transform rotate-3 max-w-[220px]">
+                            <p class="text-[10px] font-black uppercase text-semacon tracking-widest">PILARES DO EVENTO</p>
+                            <p class="font-serif font-bold text-xs text-semacon-darkslate leading-tight mt-0.5">
+                                AUDITORIA • PERÍCIA • TECNOLOGIA • ÉTICA
+                            </p>
+                        </div>
+
+                        <!-- Floating Date Tag -->
+                        <div class="absolute -top-5 -right-3 bg-semacon-dark text-white px-4 py-2 border border-black shadow-editorial-sm transform -rotate-2 font-serif font-bold text-xs uppercase tracking-wider">
+                            NOV 03 — 07
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="sobre" class="py-20 bg-white border-b border-black/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Editorial Image/Graphic Composition -->
+                <div class="lg:col-span-5 order-2 lg:order-1">
+                    <div class="relative bg-semacon-paper p-8 border border-black shadow-editorial">
+                        <div class="absolute top-0 right-0 transform translate-x-3 -translate-y-3 bg-semacon text-white px-3 py-1 font-serif font-bold text-xs border border-black uppercase">
+                            UFAC • CCJSA • CACON
+                        </div>
+                        <h3 class="font-serif font-black text-2xl text-semacon-darkslate mb-4 border-b-2 border-semacon pb-2">
+                            CONECTANDO A ACADEMIA E O MERCADO
+                        </h3>
+                        <p class="text-sm text-semacon-charcoal leading-relaxed mb-6">
+                            A 3ª Semana Acadêmica de Ciências Contábeis (SEMACON) constitui um espaço estratégico de integração entre estudantes, professores, pesquisadores e renomados especialistas da área.
+                        </p>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3 bg-white p-3 border border-black/10">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-semacon flex-shrink-0 mt-0.5"></i>
+                                <span class="text-xs font-semibold text-semacon-darkslate">Aproximação prática das transformações tecnológicas e inteligência artificial na contabilidade.</span>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white p-3 border border-black/10">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-semacon flex-shrink-0 mt-0.5"></i>
+                                <span class="text-xs font-semibold text-semacon-darkslate">Debates aprofundados sobre prevenção de fraudes, lavagem de dinheiro e perícia técnica.</span>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white p-3 border border-black/10">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-semacon flex-shrink-0 mt-0.5"></i>
+                                <span class="text-xs font-semibold text-semacon-darkslate">Desenvolvimento de competências essenciais através de oficinas práticas exclusivas no sábado.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content Column -->
+                <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+                    <div class="inline-block bg-semacon-soft text-semacon font-bold text-xs uppercase tracking-widest px-3 py-1 border border-semacon-light">
+                        SOBRE A 3ª SEMACON
+                    </div>
+                    
+                    <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-semacon-darkslate leading-tight">
+                        Integrando Ensino, Pesquisa, Extensão e Exercício Profissional
+                    </h2>
+
+                    <p class="text-base text-semacon-charcoal leading-relaxed">
+                        Em sua terceira edição na Universidade Federal do Acre, a SEMACON busca responder aos desafios éticos, regulatórios e tecnológicos que impactam diretamente a atuação do auditor e do perito contábil.
+                    </p>
+
+                    <p class="text-sm text-semacon-charcoal/90 leading-relaxed italic border-l-2 border-semacon pl-4 my-4">
+                        "Conectando conhecimentos, desenvolvendo competências e aproximando a academia das práticas profissionais."
+                    </p>
+
+                    <!-- Key Event Indicators / Metrics Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-gray-200">
+                        <div class="bg-semacon-paper p-4 border border-black/20 text-center">
+                            <span class="font-serif font-black text-3xl text-semacon block">3ª</span>
+                            <span class="text-[11px] font-bold text-semacon-charcoal uppercase tracking-wider">Edição Oficial</span>
+                        </div>
+                        <div class="bg-semacon-paper p-4 border border-black/20 text-center">
+                            <span class="font-serif font-black text-3xl text-semacon block">05</span>
+                            <span class="text-[11px] font-bold text-semacon-charcoal uppercase tracking-wider">Dias Intensivos</span>
+                        </div>
+                        <div class="bg-semacon-paper p-4 border border-black/20 text-center">
+                            <span class="font-serif font-black text-3xl text-semacon block">15+</span>
+                            <span class="text-[11px] font-bold text-semacon-charcoal uppercase tracking-wider">Palestrantes</span>
+                        </div>
+                        <div class="bg-semacon-paper p-4 border border-black/20 text-center">
+                            <span class="font-serif font-black text-3xl text-semacon block">04</span>
+                            <span class="text-[11px] font-bold text-semacon-charcoal uppercase tracking-wider">Oficinas Práticas</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- THEME OF THE EDITION SECTION -->
+    <section class="py-20 bg-semacon text-white relative overflow-hidden border-b border-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Section Header -->
+            <div class="max-w-3xl mb-12">
+                <span class="bg-white text-semacon font-bold text-xs uppercase tracking-widest px-3 py-1 border border-black shadow-editorial-sm">
+                    TEMA CENTRAL DA EDIÇÃO
+                </span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-black text-white mt-4 leading-tight">
+                    Auditoria e Perícia Contábil
+                </h2>
+                <p class="text-semacon-light font-medium text-lg mt-2">
+                    Conectando Conhecimentos e Práticas Profissionais
+                </p>
+            </div>
+
+            <!-- Pillars Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Pillar 1 -->
+                <div class="bg-white text-semacon-darkslate p-6 border border-black shadow-editorial relative group hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-semacon-soft text-semacon border border-black flex items-center justify-center font-serif font-bold text-xl mb-4">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif font-extrabold text-xl mb-2 text-semacon-darkslate">Combate a Fraudes</h3>
+                    <p class="text-xs text-semacon-charcoal leading-relaxed">
+                        Atuação conjunta com Polícia Federal, Receita Federal e MPF no combate a crimes financeiros e lavagem de dinheiro.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-white text-semacon-darkslate p-6 border border-black shadow-editorial relative group hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-semacon-soft text-semacon border border-black flex items-center justify-center font-serif font-bold text-xl mb-4">
+                        <i data-lucide="scale" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif font-extrabold text-xl mb-2 text-semacon-darkslate">Perícia Judicial</h3>
+                    <p class="text-xs text-semacon-charcoal leading-relaxed">
+                        Vivência prática com Tribunal Simulado, formulação de quesitos, laudos periciais e defesas técnicas em juízo.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-white text-semacon-darkslate p-6 border border-black shadow-editorial relative group hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-semacon-soft text-semacon border border-black flex items-center justify-center font-serif font-bold text-xl mb-4">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif font-extrabold text-xl mb-2 text-semacon-darkslate">Transformação Digital</h3>
+                    <p class="text-xs text-semacon-charcoal leading-relaxed">
+                        O futuro da profissão diante da Inteligência Artificial, automação fiscal e ecossistemas digitais de auditoria.
+                    </p>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="bg-white text-semacon-darkslate p-6 border border-black shadow-editorial relative group hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-semacon-soft text-semacon border border-black flex items-center justify-center font-serif font-bold text-xl mb-4">
+                        <i data-lucide="building-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif font-extrabold text-xl mb-2 text-semacon-darkslate">Auditoria Pública</h3>
+                    <p class="text-xs text-semacon-charcoal leading-relaxed">
+                        Controle governamental pelo Tribunal de Contas do Estado (TCE) e geração de valor público com transparência.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROGRAMAÇÃO INTERATIVA SECTION -->
+    <section id="programacao" class="py-20 bg-semacon-paper border-b border-black/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Title & Subtitle -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-semacon block mb-1">CRONOGRAMA OFICIAL</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-semacon-darkslate">
+                        Programação do Evento
+                    </h2>
+                </div>
+                <p class="text-sm text-semacon-charcoal max-w-md">
+                    Selecione os dias da semana para explorar todas as conferências, mesas-redondas, atividades e oficinas.
+                </p>
+            </div>
+
+            <!-- Day Selector Tabs -->
+            <div class="flex flex-wrap gap-2 mb-8 border-b-2 border-black/20 pb-4" id="day-tabs">
+                <button onclick="switchDay('terca')" id="tab-terca" class="day-tab bg-semacon text-white border border-black px-4 py-2.5 font-serif font-bold text-sm shadow-editorial-sm transition-all">
+                    TERÇA • 03/11
+                </button>
+                <button onclick="switchDay('quarta')" id="tab-quarta" class="day-tab bg-white text-semacon-darkslate border border-black px-4 py-2.5 font-serif font-bold text-sm hover:bg-semacon-soft transition-all">
+                    QUARTA • 04/11
+                </button>
+                <button onclick="switchDay('quinta')" id="tab-quinta" class="day-tab bg-white text-semacon-darkslate border border-black px-4 py-2.5 font-serif font-bold text-sm hover:bg-semacon-soft transition-all">
+                    QUINTA • 05/11
+                </button>
+                <button onclick="switchDay('sexta')" id="tab-sexta" class="day-tab bg-white text-semacon-darkslate border border-black px-4 py-2.5 font-serif font-bold text-sm hover:bg-semacon-soft transition-all">
+                    SEXTA • 06/11
+                </button>
+                <button onclick="switchDay('sabado')" id="tab-sabado" class="day-tab bg-white text-semacon-darkslate border border-black px-4 py-2.5 font-serif font-bold text-sm hover:bg-semacon-soft transition-all">
+                    SÁBADO • 07/11 (OFICINAS)
+                </button>
+            </div>
+
+            <!-- Category Filter Sub-bar -->
+            <div class="flex items-center gap-2 mb-8 overflow-x-auto pb-2">
+                <span class="text-xs font-bold text-semacon-charcoal uppercase mr-2">Filtrar por:</span>
+                <button onclick="filterType('ALL')" class="type-btn text-xs font-bold px-3 py-1 bg-semacon-darkslate text-white rounded-full">Todos</button>
+                <button onclick="filterType('PALESTRA')" class="type-btn text-xs font-bold px-3 py-1 bg-white border border-black/20 text-semacon-charcoal rounded-full hover:border-semacon">Palestras</button>
+                <button onclick="filterType('MESA')" class="type-btn text-xs font-bold px-3 py-1 bg-white border border-black/20 text-semacon-charcoal rounded-full hover:border-semacon">Mesas-Redondas</button>
+                <button onclick="filterType('OFICINA')" class="type-btn text-xs font-bold px-3 py-1 bg-white border border-black/20 text-semacon-charcoal rounded-full hover:border-semacon">Oficinas</button>
+                <button onclick="filterType('EVENTO')" class="type-btn text-xs font-bold px-3 py-1 bg-white border border-black/20 text-semacon-charcoal rounded-full hover:border-semacon">Solenidades & Atividades</button>
+            </div>
+
+            <!-- Schedule Timeline Container -->
+            <div id="schedule-container" class="space-y-6">
+                <!-- Programmatically populated by JS -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PALESTRANTES SECTION -->
+    <section id="palestrantes" class="py-20 bg-white border-b border-black/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-semacon block mb-1">CORPO DOCENTE E CONVIDADOS</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-semacon-darkslate">
+                    Palestrantes e Especialistas
+                </h2>
+                <p class="text-sm text-semacon-charcoal mt-2">
+                    Profissionais de destaque nacional e regional reunidos para compartilhar práticas reais e insights sobre Auditoria e Perícia.
+                </p>
+            </div>
+
+            <!-- Speakers Cards Grid -->
+            <div id="speakers-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamic insertion via JavaScript -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SPEAKER DETAILS MODAL -->
+    <div id="speaker-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div class="bg-white border-2 border-black max-w-2xl w-full shadow-editorial relative overflow-hidden max-h-[90vh] flex flex-col">
+            
+            <!-- Modal Header -->
+            <div class="bg-semacon text-white px-6 py-4 flex items-center justify-between border-b border-black">
+                <span class="font-serif font-bold text-sm uppercase tracking-wider">PERFIL DO PALESTRANTE</span>
+                <button onclick="closeSpeakerModal()" class="text-white hover:text-semacon-light p-1">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div class="p-6 md:p-8 overflow-y-auto space-y-6">
+                <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                    <div class="w-28 h-28 sm:w-36 sm:h-36 bg-semacon-paper border-2 border-black rounded-full overflow-hidden flex-shrink-0 shadow-editorial-sm flex items-center justify-center font-serif text-3xl text-semacon font-black" id="modal-avatar">
+                        <!-- Avatar / Photo -->
+                    </div>
+                    <div class="text-center sm:text-left space-y-2">
+                        <h3 id="modal-name" class="font-serif font-extrabold text-2xl text-semacon-darkslate"></h3>
+                        <p id="modal-role" class="text-sm font-bold text-semacon"></p>
+                        <p id="modal-institution" class="text-xs text-semacon-charcoal uppercase tracking-wider font-semibold"></p>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-200 pt-4">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-semacon mb-2">TEMA DE ATUAÇÃO NO EVENTO:</h4>
+                    <div class="bg-semacon-soft p-4 border border-semacon-light text-semacon-darkslate font-serif font-bold text-base" id="modal-topic">
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-200 pt-4">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-semacon mb-2">BIOGRAFIA E FORMAÇÃO:</h4>
+                    <p id="modal-bio" class="text-sm text-semacon-charcoal leading-relaxed space-y-2">
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="bg-semacon-paper px-6 py-4 border-t border-black text-right">
+                <button onclick="closeSpeakerModal()" class="bg-semacon-darkslate text-white text-xs font-bold uppercase tracking-wider px-6 py-2.5 border border-black hover:bg-semacon transition-colors">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXPERIÊNCIAS & OFICINAS DO SÁBADO -->
+    <section id="oficinas" class="py-20 bg-semacon-paper border-b border-black/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="bg-semacon text-white text-xs font-bold uppercase tracking-widest px-3 py-1 border border-black">SÁBADO • 07 DE NOVEMBRO</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-semacon-darkslate mt-3">
+                        Oficinas Práticas e Capacitação
+                    </h2>
+                </div>
+                <p class="text-sm text-semacon-charcoal max-w-md">
+                    Horário: <strong class="text-semacon">08h00 às 10h30</strong>. As oficinas oferecem imersão técnica com vagas limitadas.
+                </p>
+            </div>
+
+            <!-- 4 Workshops Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Workshop 1 -->
+                <div class="bg-white border-2 border-black p-6 shadow-editorial relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-semacon-soft text-semacon text-[11px] font-bold px-2.5 py-1 border border-semacon-light uppercase">OFICINA 01</span>
+                            <span class="text-xs font-bold text-semacon-charcoal flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 08h00 - 10h30</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-semacon-darkslate mb-3">
+                            Licitações, Terceirização e Responsabilidade Trabalhista
+                        </h3>
+                        <p class="text-xs text-semacon-charcoal leading-relaxed mb-4">
+                            Elaboração de processo licitatório, gestão contratual, serviços terceirizados na Administração Pública e jurisprudência trabalhista.
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-200 pt-4 mt-2">
+                        <span class="text-[11px] font-bold uppercase text-semacon block">MINISTRANTES:</span>
+                        <p class="text-xs font-semibold text-semacon-darkslate">Leonardo Martins <span class="text-semacon-charcoal font-normal">(Esp. em Licitações)</span> & Robson Medeiros <span class="text-semacon-charcoal font-normal">(Juiz de Direito TJ/AC)</span></p>
+                    </div>
+                </div>
+
+                <!-- Workshop 2 -->
+                <div class="bg-white border-2 border-black p-6 shadow-editorial relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-semacon-soft text-semacon text-[11px] font-bold px-2.5 py-1 border border-semacon-light uppercase">OFICINA 02</span>
+                            <span class="text-xs font-bold text-semacon-charcoal flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 08h00 - 10h30</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-semacon-darkslate mb-3">
+                            Análise de Propostas de Parcerias com Recursos de Emendas Parlamentares
+                        </h3>
+                        <p class="text-xs text-semacon-charcoal leading-relaxed mb-4">
+                            Do Plano de Trabalho à Prestação de Contas: Termo de Fomento vs. Convênio, aplicação de recursos e análise documental prática.
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-200 pt-4 mt-2">
+                        <span class="text-[11px] font-bold uppercase text-semacon block">MINISTRANTE:</span>
+                        <p class="text-xs font-semibold text-semacon-darkslate">Econ. Aldelice de Melo Souza <span class="text-semacon-charcoal font-normal">(Gestora de Políticas Públicas do Estado do Acre)</span></p>
+                    </div>
+                </div>
+
+                <!-- Workshop 3 -->
+                <div class="bg-white border-2 border-black p-6 shadow-editorial relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-semacon-soft text-semacon text-[11px] font-bold px-2.5 py-1 border border-semacon-light uppercase">OFICINA 03</span>
+                            <span class="text-xs font-bold text-semacon-charcoal flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 08h00 - 10h30</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-semacon-darkslate mb-3">
+                            A Saúde Mental do Profissional Contábil
+                        </h3>
+                        <p class="text-xs text-semacon-charcoal leading-relaxed mb-4">
+                            Abordagem essencial sobre aspectos emocionais, síndrome do esgotamento, pressão regulatória e estratégias de bem-estar na profissão.
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-200 pt-4 mt-2">
+                        <span class="text-[11px] font-bold uppercase text-semacon block">MINISTRANTE:</span>
+                        <p class="text-xs font-semibold text-semacon-darkslate">Prof. Dr. João Auricélio <span class="text-semacon-charcoal font-normal">(Docente / Especialista)</span></p>
+                    </div>
+                </div>
+
+                <!-- Workshop 4 -->
+                <div class="bg-white border-2 border-black p-6 shadow-editorial relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-semacon-soft text-semacon text-[11px] font-bold px-2.5 py-1 border border-semacon-light uppercase">OFICINA 04</span>
+                            <span class="text-xs font-bold text-semacon-charcoal flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 08h00 - 10h30</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-semacon-darkslate mb-3">
+                            Finanças Comportamentais
+                        </h3>
+                        <p class="text-xs text-semacon-charcoal leading-relaxed mb-4">
+                            Análise da tomada de decisão: trabalhando a integração entre o lado emocional e racional na gestão financeira e de perícias.
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-200 pt-4 mt-2">
+                        <span class="text-[11px] font-bold uppercase text-semacon block">MINISTRANTE:</span>
+                        <p class="text-xs font-semibold text-semacon-darkslate">Prof.ª Dra. Gilvanete Dantas <span class="text-semacon-charcoal font-normal">(UFAC)</span></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INSCRIÇÕES ABERTAS SECTION -->
+    <section class="py-20 bg-white border-b border-black/10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="bg-semacon text-white border-2 border-black p-8 sm:p-12 shadow-editorial relative overflow-hidden text-center sm:text-left">
+                
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
+                    <div class="md:col-span-8 space-y-4">
+                        <span class="bg-white text-semacon text-xs font-bold uppercase tracking-widest px-3 py-1 border border-black inline-block">
+                            VAGAS LIMITADAS
+                        </span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-black leading-tight text-white">
+                            Garanta sua Participação na 3ª SEMACON
+                        </h2>
+                        <p class="text-sm text-semacon-light leading-relaxed max-w-xl">
+                            Inscrições abertas para estudantes de graduação, pós-graduação, professores, peritos, auditores e profissionais de contabilidade do Acre e região.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-4 text-xs text-white/90 font-medium pt-2">
+                            <span class="flex items-center gap-1.5 bg-black/20 px-3 py-1.5 border border-white/20">
+                                <i data-lucide="check" class="w-4 h-4 text-semacon-light"></i> Certificado de Participação
+                            </span>
+                            <span class="flex items-center gap-1.5 bg-black/20 px-3 py-1.5 border border-white/20">
+                                <i data-lucide="check" class="w-4 h-4 text-semacon-light"></i> Acesso às Palestras & Painéis
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-4 flex flex-col items-center justify-center">
+                        <a href="https://script.google.com/macros/s/AKfycbw_A65IcJciw4kSjk2ULmWSbghsnzv4rDzgA5SE2ilrGNS6b9ToDkTYxL8ma7FQwSmW/exec" target="_blank" rel="noopener noreferrer" class="w-full bg-white text-semacon-dark font-serif font-black text-sm uppercase tracking-wider py-4 px-6 border-2 border-black shadow-editorial hover:bg-semacon-soft hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all text-center block">
+                            INSCREVER-SE AGORA
+                        </a>
+                        <span class="text-[11px] text-white/80 mt-2">Formulário Oficial no Google Scripts</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CERTIFICADOS SECTION -->
+    <section id="certificados" class="py-16 bg-semacon-paper border-b border-black/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <div class="bg-white border border-black p-8 shadow-editorial">
+                <i data-lucide="award" class="w-12 h-12 text-semacon mx-auto mb-3"></i>
+                <h3 class="font-serif font-extrabold text-2xl text-semacon-darkslate mb-2">
+                    Consulta de Certificados
+                </h3>
+                <p class="text-xs text-semacon-charcoal max-w-md mx-auto mb-6">
+                    Após o encerramento do evento no dia 07/11/2026, a emissão e validação dos certificados estará disponível diretamente neste portal.
+                </p>
+
+                <div class="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
+                    <input type="text" id="cert-input" placeholder="Digite seu CPF ou Código de Inscrição..." class="flex-1 bg-semacon-paper border border-black px-4 py-2.5 text-xs focus:outline-none focus:ring-2 focus:ring-semacon">
+                    <button onclick="checkCertificate()" class="bg-semacon text-white text-xs font-bold uppercase tracking-wider px-6 py-2.5 border border-black hover:bg-semacon-dark transition-colors">
+                        Consultar
+                    </button>
+                </div>
+                <p id="cert-result" class="text-xs font-bold text-semacon mt-3 hidden"></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO / ONDE ACONTECE SECTION -->
+    <section id="localizacao" class="py-20 bg-white border-b border-black/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-semacon block">LOCAL DO EVENTO</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-semacon-darkslate">
+                        Anfiteatro Garibaldi Brasil
+                    </h2>
+                    <p class="text-sm text-semacon-charcoal leading-relaxed">
+                        Campus Universitário da Universidade Federal do Acre (UFAC) em Rio Branco - Acre. Estrutura completa com auditório climatizado, espaço para networking e salas de oficinas.
+                    </p>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-semacon flex-shrink-0 mt-0.5"></i>
+                            <div class="text-xs">
+                                <strong class="block text-semacon-darkslate">Endereço:</strong>
+                                <span class="text-semacon-charcoal">BR-364, Km 04 - Distrito Industrial, Rio Branco - AC, 69917-400</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="clock" class="w-5 h-5 text-semacon flex-shrink-0 mt-0.5"></i>
+                            <div class="text-xs">
+                                <strong class="block text-semacon-darkslate">Credenciamento:</strong>
+                                <span class="text-semacon-charcoal">Terça-feira (03/11) a partir das 17h30 no hall do Anfiteatro</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="https://www.google.com/maps/dir//Anfiteatro+Garibaldi+Brasil+-+Campus+da+Universidade+Federal+do+Acre,+Rio+Branco+-+AC,+69917-400/@-9.9559052,-67.8655533,18z/data=!3m1!4b1!4m17!1m7!3m6!1s0x917f8ea238bdddf9:0x81261e9af7020765!2sAnfiteatro+Garibaldi+Brasil!8m2!3d-9.9559765!4d-67.864357!16s%2Fg%2F1ptwlkvlp!4m8!1m0!1m5!1m1!1s0x917f8ea238bdddf9:0x81261e9af7020765!2m2!1d-67.8643584!2d-9.9559102!3e9?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-semacon text-white text-xs font-bold uppercase tracking-wider px-6 py-3 border border-black shadow-editorial hover:bg-semacon-dark transition-all">
+                            <i data-lucide="navigation" class="w-4 h-4"></i>
+                            <span>Abrir Rota no Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <!-- Map Box Placeholder with Styling -->
+                    <div class="bg-semacon-paper border-2 border-black p-4 shadow-editorial relative">
+                        <div class="bg-white border border-black p-6 text-center space-y-4">
+                            <div class="w-16 h-16 bg-semacon-soft text-semacon rounded-full flex items-center justify-center mx-auto border border-semacon-light">
+                                <i data-lucide="map" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-lg text-semacon-darkslate">Campus UFAC — Rio Branco/AC</h3>
+                            <p class="text-xs text-semacon-charcoal max-w-md mx-auto">
+                                O Anfiteatro Garibaldi Brasil fica localizado próximo ao bloco de Direito e ao Restaurante Universitário. Haverá sinalização temática da 3ª SEMACON em todas as vias do campus.
+                            </p>
+                            <a href="https://www.google.com/maps/dir//Anfiteatro+Garibaldi+Brasil+-+Campus+da+Universidade+Federal+do+Acre,+Rio+Branco+-+AC,+69917-400/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-semacon underline hover:text-semacon-dark inline-block">
+                                Visualizar mapa interativo completo &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-20 bg-semacon-paper border-b border-black/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-semacon block mb-1">DÚVIDAS FREQUENTES</span>
+                <h2 class="font-serif text-3xl font-extrabold text-semacon-darkslate">
+                    Perguntas Frequentes
+                </h2>
+            </div>
+
+            <!-- Accordion Container -->
+            <div class="space-y-4" id="faq-accordion">
+                
+                <!-- Q1 -->
+                <div class="bg-white border border-black shadow-editorial-sm">
+                    <button onclick="toggleFaq(1)" class="w-full px-6 py-4 text-left font-serif font-bold text-base text-semacon-darkslate flex justify-between items-center hover:text-semacon transition-colors">
+                        <span>O que é a SEMACON?</span>
+                        <i id="faq-icon-1" data-lucide="chevron-down" class="w-5 h-5 text-semacon transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-1" class="hidden px-6 pb-4 text-xs text-semacon-charcoal leading-relaxed border-t border-gray-100 pt-3">
+                        A Semana Acadêmica de Ciências Contábeis (SEMACON) é o evento oficial promovido pelo Curso de Ciências Contábeis da UFAC e pelo Centro Acadêmico (CACON), reunindo alunos, professores e profissionais para discutir tendências de Auditoria, Perícia e Mercado.
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="bg-white border border-black shadow-editorial-sm">
+                    <button onclick="toggleFaq(2)" class="w-full px-6 py-4 text-left font-serif font-bold text-base text-semacon-darkslate flex justify-between items-center hover:text-semacon transition-colors">
+                        <span>Quem pode participar do evento?</span>
+                        <i id="faq-icon-2" data-lucide="chevron-down" class="w-5 h-5 text-semacon transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-2" class="hidden px-6 pb-4 text-xs text-semacon-charcoal leading-relaxed border-t border-gray-100 pt-3">
+                        O evento é aberto a estudantes de graduação e pós-graduação, professores, contadores, peritos, auditores, advogados, gestores públicos e demais profissionais interessados na área contábil e jurídica.
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-white border border-black shadow-editorial-sm">
+                    <button onclick="toggleFaq(3)" class="w-full px-6 py-4 text-left font-serif font-bold text-base text-semacon-darkslate flex justify-between items-center hover:text-semacon transition-colors">
+                        <span>Como realizo minha inscrição?</span>
+                        <i id="faq-icon-3" data-lucide="chevron-down" class="w-5 h-5 text-semacon transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-3" class="hidden px-6 pb-4 text-xs text-semacon-charcoal leading-relaxed border-t border-gray-100 pt-3">
+                        As inscrições são feitas de forma totalmente online pelo link do formulário oficial disponibilizado nos botões "INSCREVA-SE" deste site.
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="bg-white border border-black shadow-editorial-sm">
+                    <button onclick="toggleFaq(4)" class="w-full px-6 py-4 text-left font-serif font-bold text-base text-semacon-darkslate flex justify-between items-center hover:text-semacon transition-colors">
+                        <span>Haverá emissão de certificado de horas complementares?</span>
+                        <i id="faq-icon-4" data-lucide="chevron-down" class="w-5 h-5 text-semacon transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-4" class="hidden px-6 pb-4 text-xs text-semacon-charcoal leading-relaxed border-t border-gray-100 pt-3">
+                        Sim, os participantes com frequência mínima comprovada nas atividades receberão certificado oficial de participação emitido pela UFAC.
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="bg-white border border-black shadow-editorial-sm">
+                    <button onclick="toggleFaq(5)" class="w-full px-6 py-4 text-left font-serif font-bold text-base text-semacon-darkslate flex justify-between items-center hover:text-semacon transition-colors">
+                        <span>Como funcionam as oficinas de Sábado (07/11)?</span>
+                        <i id="faq-icon-5" data-lucide="chevron-down" class="w-5 h-5 text-semacon transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-5" class="hidden px-6 pb-4 text-xs text-semacon-charcoal leading-relaxed border-t border-gray-100 pt-3">
+                        As oficinas ocorrem simultaneamente no sábado das 08h às 10h30 em salas específicas. A escolha da oficina será confirmada durante o credenciamento presencial.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- REALIZAÇÃO E APOIO SECTION -->
+    <section class="py-16 bg-white border-b border-black/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-10">
+                <span class="text-xs font-bold uppercase tracking-widest text-semacon block mb-1">INSTITUIÇÕES ORGANIZADORAS</span>
+                <h3 class="font-serif font-bold text-xl text-semacon-darkslate">Realização e Apoio Institucional</h3>
+            </div>
+
+            <!-- Realização Logos Grid -->
+            <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12 mb-12">
+                <div class="bg-semacon-paper px-6 py-4 border border-black shadow-editorial-sm font-serif font-black text-semacon text-lg">
+                    UFAC
+                </div>
+                <div class="bg-semacon-paper px-6 py-4 border border-black shadow-editorial-sm font-serif font-bold text-semacon-darkslate text-sm">
+                    Ciências Contábeis
+                </div>
+                <div class="bg-semacon-paper px-6 py-4 border border-black shadow-editorial-sm font-serif font-bold text-semacon-darkslate text-sm">
+                    CACON — Centro Acadêmico
+                </div>
+                <div class="bg-semacon-paper px-6 py-4 border border-black shadow-editorial-sm font-serif font-bold text-semacon-darkslate text-sm">
+                    CCJSA
+                </div>
+                <div class="bg-semacon-paper px-6 py-4 border border-black shadow-editorial-sm font-serif font-bold text-semacon-darkslate text-sm">
+                    CRC / AC
+                </div>
+            </div>
+
+            <!-- Committee List -->
+            <div class="max-w-3xl mx-auto bg-semacon-soft border border-semacon-light p-6 text-center">
+                <h4 class="font-serif font-bold text-xs uppercase text-semacon tracking-widest mb-3">COMISSÃO ORGANIZADORA E DOCENTES</h4>
+                <p class="text-xs text-semacon-charcoal leading-relaxed">
+                    Prof.ª Dr.ª Oleides Francisca de Oliveira • Prof. Dr. José Marconde Souza da Silva <span class="font-bold text-semacon">(Coordenador)</span> • Prof. Dr. Deivid Ilecki Forgiarini • Prof.ª Dra. Gilvanete Pereira Dantas • Prof. Me. Dailton Farias Freitas • Hanara Ferreira e Ferreira <span class="font-bold text-semacon">(Pres. CACON)</span> • Leonardo Martins da Silva Conceição
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA FINAL SECTION -->
+    <section class="py-20 bg-semacon text-white text-center border-b border-black relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+            <span class="bg-white text-semacon font-serif font-black text-2xl px-4 py-1.5 border border-black shadow-editorial inline-block">
+                3ª SEMACON • 2026
+            </span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-black text-white leading-tight">
+                Faça Parte do Maior Evento Contábil da UFAC
+            </h2>
+            <p class="text-semacon-light text-base max-w-xl mx-auto">
+                "Auditoria e Perícia Contábil: Conectando Conhecimentos e Práticas Profissionais"
+            </p>
+            <div class="pt-4">
+                <a href="https://script.google.com/macros/s/AKfycbw_A65IcJciw4kSjk2ULmWSbghsnzv4rDzgA5SE2ilrGNS6b9ToDkTYxL8ma7FQwSmW/exec" target="_blank" rel="noopener noreferrer" class="bg-white text-semacon-dark font-serif font-black text-sm uppercase tracking-wider py-4 px-10 border-2 border-black shadow-editorial hover:bg-semacon-soft transition-all inline-block">
+                    Garantir Minha Vaga Agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-semacon-darkslate text-white py-12 border-t border-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center border-b border-white/10 pb-8 mb-8">
+                
+                <div class="md:col-span-6 space-y-2">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-semacon text-white text-xs font-serif font-black px-2 py-0.5">3º</span>
+                        <span class="font-serif font-bold text-lg">SEMACON UFAC 2026</span>
+                    </div>
+                    <p class="text-xs text-gray-400">
+                        Universidade Federal do Acre — Campus Rio Branco / AC
+                    </p>
+                </div>
+
+                <div class="md:col-span-6 flex flex-wrap gap-6 md:justify-end text-xs font-semibold text-gray-300">
+                    <a href="#inicio" class="hover:text-semacon-light">Início</a>
+                    <a href="#programacao" class="hover:text-semacon-light">Programação</a>
+                    <a href="#palestrantes" class="hover:text-semacon-light">Palestrantes</a>
+                    <a href="#oficinas" class="hover:text-semacon-light">Oficinas</a>
+                    <a href="#localizacao" class="hover:text-semacon-light">Localização</a>
+                    <a href="https://script.google.com/macros/s/AKfycbw_A65IcJciw4kSjk2ULmWSbghsnzv4rDzgA5SE2ilrGNS6b9ToDkTYxL8ma7FQwSmW/exec" target="_blank" class="text-semacon-light hover:underline">Inscrições</a>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-400 gap-4">
+                <p>© 2026 3ª SEMACON — Semana Acadêmica de Contabilidade. Todos os direitos reservados.</p>
+                <p class="text-gray-500">Desenvolvido com padrão editorial para a UFAC.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        
+        // Schedule Dataset containing exact schedule from official PDF document
+        const scheduleData = {
+            terca: [
+                {
+                    time: "17h30 - 18h00",
+                    type: "EVENTO",
+                    title: "Credenciamento Presencial",
+                    location: "Hall do Anfiteatro Garibaldi Brasil",
+                    description: "Retirada de crachás e material oficial da 3ª SEMACON."
+                },
+                {
+                    time: "18h00 - 19h00",
+                    type: "EVENTO",
+                    title: "Solenidade de Abertura Oficial",
+                    location: "Anfiteatro Garibaldi Brasil",
+                    speaker: "Reitor da UFAC; Diretor do CCJSA; Coordenadora de Ciências Contábeis; Presidente do CRC-AC; Coordenador da 3ª SEMACON; Presidente do CACON.",
+                    description: "Abertura oficial com composição da mesa diretora das entidades acadêmicas e profissionais."
+                },
+                {
+                    time: "19h00 - 20h30",
+                    type: "MESA",
+                    title: "Café com Especialistas: Como os órgãos atuam na lavagem de dinheiro",
+                    location: "Anfiteatro Garibaldi Brasil",
+                    speaker: "Delegado PF Natanael Teixeira • Delegado Receita Federal Claudenir Franklin da Silveira • Procurador MPF Ricardo Alexandre Souza Lagos",
+                    description: "Debate e interação com os participantes abordando a investigação de crimes financeiros e inteligência fiscal."
+                },
+                {
+                    time: "20h30 - 22h30",
+                    type: "PALESTRA",
+                    title: "Palestra Magna: Auditoria e Perícia Contábil — O Futuro da Profissão em um Ambiente de Transformação Digital",
+                    location: "Anfiteatro Garibaldi Brasil",
+                    speaker: "Prof. Dr. Daniel Chaves Fernandes (DF)",
+                    description: "Conferência de abertura sobre o impacto da transformação digital e inteligência artificial na auditoria."
+                }
+            ],
+            quarta: [
+                {
+                    time: "19h00 - 20h30",
+                    type: "PALESTRA",
+                    title: "Fraudes Corporativas e Crimes Financeiros: Como a Auditoria e a Perícia Atuam na Produção de Evidências",
+                    location: "Anfiteatro Garibaldi Brasil",
+                    speaker: "Prof. Me. Marcelo Victor (TJ/AC)",
+                    description: "Produção de laudos e provas periciais em processos de combate a fraudes no Tribunal de Justiça."
+                },
+                {
+                    time: "20h30 - 20h45",
+                    type: "EVENTO",
+                    title: "Sorteio de Brindes Exclusivos",
+                    location: "Anfiteatro Garibaldi Brasil",
+                    speaker: "Responsável: CACON",
+                    description: "Momento de desintoxicação acadêmica e sorteio de livros e brindes patrocinados."
+                },
+                {
+                    time: "20h45 - 22h30",
+                    type: "PALESTRA",
+                    title: "Auditoria Governamental como Ferramenta de Controle e Geração de Valor Público",
+                    location: "Anfiteatro Garibaldi Brasil",
+                    speaker: "Prof.ª Esp. Marnizia da Rocha Silva (Auditora do TCE/AC)",
+                    description: "Fiscalização pública, transparência em contas de governo e controle externo."
+                }
+            ],
+            quinta: [
+                {
+                    time: "19h00 - 21h30",
+                    type: "MESA",
+                    title: "Mesa-Redonda: O Futuro da Profissão Contábil",
+                    location: "Anfiteatro Garibaldi Brasil",
+                    speaker: "Representante do CRC • Prof.ª Dra. Oleide Oliveira (UFAC) • Prof. Marcelo Ruiz Silva (UNINORTE) • Prof. José da Costa Dourado Neto (UNIMETA)",
+                    description: "Diálogo multidisciplinar entre auditores, peritos, pesquisadores e lideranças acadêmicas das instituições de ensino."
+                },
+                {
+                    time: "21h30 - 22h30",
+                    type: "PALESTRA",
+                    title: "Tribunal Simulado de Perícia Contábil",
+                    location: "Anfiteatro Garibaldi Brasil",
+                    speaker: "Ministrante: Hanara Ferreira (Presidente do CACON)",
+                    description: "Simulação prática: Nomeação do perito, formulação de quesitos, produção do laudo pericial e defesa técnica das conclusões."
+                }
+            ],
+            sexta: [
+                {
+                    time: "19h00 - 19h30",
+                    type: "EVENTO",
+                    title: "Cerimônia de Encerramento & A Formação do Contador do Futuro",
+                    location: "Anfiteatro Garibaldi Brasil",
+                    speaker: "Prof. Dr. José Marconde Souza da Silva (Coordenador da SEMACON)",
+                    description: "Competências essenciais para um mercado contábil em contínua transformação."
+                },
+                {
+                    time: "19h30 - 20h00",
+                    type: "EVENTO",
+                    title: "Apresentação Cultural",
+                    location: "Anfiteatro Garibaldi Brasil",
+                    description: "Apresentação de artistas acreanos e manifestação artística local."
+                },
+                {
+                    time: "20h00 - 20h40",
+                    type: "EVENTO",
+                    title: "Stand-Up Contábil",
+                    location: "Anfiteatro Garibaldi Brasil",
+                    description: "Apresentação bem-humorada sobre as situações diárias de contadores, auditores e estudantes."
+                },
+                {
+                    time: "20h40 - 22h30",
+                    type: "EVENTO",
+                    title: "Coffee Break & Networking de Confraternização",
+                    location: "Hall do Anfiteatro Garibaldi Brasil",
+                    description: "Momento para integração, troca de contatos e fotos oficiais."
+                }
+            ],
+            sabado: [
+                {
+                    time: "08h00 - 10h30",
+                    type: "OFICINA",
+                    title: "Oficina 01: Licitações, Terceirização e Responsabilidade Trabalhista",
+                    location: "Sala de Capacitação UFAC",
+                    speaker: "Leonardo Martins (Esp. Licitações) & Robson Medeiros (Juiz TJ/AC)",
+                    description: "Gestão contratual pública, regramento de terceirização e jurisprudência trabalhista."
+                },
+                {
+                    time: "08h00 - 10h30",
+                    type: "OFICINA",
+                    title: "Oficina 02: Análise de Propostas de Parcerias com Recursos de Emendas Parlamentares Estaduais",
+                    location: "Sala de Capacitação UFAC",
+                    speaker: "Econ. Aldelice de Melo Souza (Gestora de Políticas Públicas do Estado do Acre)",
+                    description: "Do plano de trabalho à prestação de contas de Termos de Fomento e Convênios."
+                },
+                {
+                    time: "08h00 - 10h30",
+                    type: "OFICINA",
+                    title: "Oficina 03: A Saúde Mental do Profissional Contábil",
+                    location: "Sala de Capacitação UFAC",
+                    speaker: "Prof. Dr. João Auricélio",
+                    description: "Trabalhando o lado emocional, controle do estresse e gestão da rotina na contabilidade."
+                },
+                {
+                    time: "08h00 - 10h30",
+                    type: "OFICINA",
+                    title: "Oficina 04: Finanças Comportamentais",
+                    location: "Sala de Capacitação UFAC",
+                    speaker: "Prof.ª Dra. Gilvanete Dantas (UFAC)",
+                    description: "Decisões financeiras sob a ótica da psicologia econômica e vieses comportamentais."
+                }
+            ]
+        };
+
+        // Speakers Dataset
+        const speakersData = [
+            {
+                id: "daniel-chaves",
+                name: "Prof. Dr. Daniel Chaves Fernandes",
+                role: "Palestrante Magna",
+                institution: "Brasília - DF",
+                topic: "Auditoria e Perícia Contábil: O Futuro da Profissão em um Ambiente de Transformação Digital",
+                bio: "Doutor e pesquisador de destaque na área contábil, com foco na convergência entre inteligência artificial, auditoria digital e pericias financeiras complexas."
+            },
+            {
+                id: "natanael-teixeira",
+                name: "Natanael Teixeira",
+                role: "Delegado da Polícia Federal",
+                institution: "Polícia Federal - DPF",
+                topic: "Combate a Crimes Financeiros e Lavagem de Dinheiro",
+                bio: "Especialista em investigação de crimes de colarinho branco, rastreamento de ativos e inteligência policial aplicada a fraudes tributárias."
+            },
+            {
+                id: "claudenir-franklin",
+                name: "Claudenir Franklin da Silveira",
+                role: "Delegado da Receita Federal",
+                institution: "Receita Federal do Brasil",
+                topic: "Fiscalização Tributária e Cruzamento de Dados Contábeis",
+                bio: "Auditor e Delegado da Receita Federal com expressiva atuação na conformidade fiscal e inteligência de dados de grandes contribuintes."
+            },
+            {
+                id: "ricardo-lagos",
+                name: "Ricardo Alexandre Souza Lagos",
+                role: "Procurador da República",
+                institution: "Ministério Público Federal - MPF",
+                topic: "Mecanismos de Controle e Proteção do Patrimônio Público",
+                bio: "Procurador do MPF atuante na tutela coletiva, combate à corrupção e articulação com peritos contábeis para produção de prova judicial."
+            },
+            {
+                id: "marcelo-victor",
+                name: "Prof. Me. Marcelo Victor",
+                role: "Perito Judicial / Mestre em Direito",
+                institution: "Tribunal de Justiça do Estado do Acre (TJ/AC)",
+                topic: "Fraudes Corporativas e Crimes Financeiros: Produção de Evidências",
+                bio: "Mestre e perito atuante em processos judiciais cíveis e criminais, com vasta experiência na elaboração de laudos periciais e instrução probatória."
+            },
+            {
+                id: "marnizia-silva",
+                name: "Prof.ª Esp. Marnizia da Rocha Silva",
+                role: "Auditora de Controle Externo",
+                institution: "Tribunal de Contas do Estado (TCE/AC)",
+                topic: "Auditoria Governamental como Ferramenta de Valor Público",
+                bio: "Especialista em contabilidade pública e auditoria governamental, focada na fiscalização e melhoria dos gastos públicos no Acre."
+            },
+            {
+                id: "oleide-oliveira",
+                name: "Prof.ª Dra. Oleide Francisca de Oliveira",
+                role: "Professora Pesquisadora",
+                institution: "Universidade Federal do Acre (UFAC)",
+                topic: "O Futuro da Profissão Contábil e Formação Acadêmica",
+                bio: "Doutora e docente do curso de Ciências Contábeis da UFAC, com vasta produção científica voltada à educação contábil e teoria da contabilidade."
+            },
+            {
+                id: "marconde-silva",
+                name: "Prof. Dr. José Marconde Souza da Silva",
+                role: "Coordenador Geral da 3ª SEMACON",
+                institution: "UFAC",
+                topic: "A Formação do Contador do Futuro: Competências para o Mercado",
+                bio: "Doutor em Ciências Contábeis, docente da UFAC e coordenador geral do evento, engajado no desenvolvimento das ciências contábeis no Norte."
+            }
+        ];
+
+        let currentActiveDay = 'terca';
+        let currentFilterType = 'ALL';
+
+        function renderSchedule() {
+            const container = document.getElementById('schedule-container');
+            container.innerHTML = '';
+
+            const dayItems = scheduleData[currentActiveDay] || [];
+            
+            const filteredItems = dayItems.filter(item => {
+                if (currentFilterType === 'ALL') return true;
+                return item.type === currentFilterType;
+            });
+
+            if (filteredItems.length === 0) {
+                container.innerHTML = `
+                    <div class="bg-white p-8 border border-black text-center text-semacon-charcoal shadow-editorial-sm">
+                        <i data-lucide="info" class="w-8 h-8 text-semacon mx-auto mb-2"></i>
+                        <p class="font-serif font-bold text-sm">Nenhuma atividade encontrada para esse filtro neste dia.</p>
+                    </div>
+                `;
+                lucide.createIcons();
+                return;
+            }
+
+            filteredItems.forEach(item => {
+                let badgeColor = "bg-semacon text-white";
+                if(item.type === "MESA") badgeColor = "bg-semacon-darkslate text-white";
+                if(item.type === "OFICINA") badgeColor = "bg-semacon-medium text-white";
+                if(item.type === "EVENTO") badgeColor = "bg-white text-semacon border border-black";
+
+                const cardHtml = `
+                    <div class="bg-white border-2 border-black p-6 shadow-editorial hover:translate-x-1 transition-transform relative">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
+                            <div class="flex items-center gap-3">
+                                <span class="bg-semacon-soft text-semacon font-serif font-black text-sm px-3 py-1 border border-semacon-light flex items-center gap-1.5">
+                                    <i data-lucide="clock" class="w-4 h-4"></i> ${item.time}
+                                </span>
+                                <span class="text-xs font-bold px-2.5 py-1 border border-black ${badgeColor}">
+                                    ${item.type}
+                                </span>
+                            </div>
+                            <span class="text-xs font-semibold text-semacon-charcoal flex items-center gap-1">
+                                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-semacon"></i> ${item.location}
+                            </span>
+                        </div>
+
+                        <h3 class="font-serif font-extrabold text-xl text-semacon-darkslate mb-2">
+                            ${item.title}
+                        </h3>
+
+                        ${item.speaker ? `
+                            <p class="text-xs font-bold text-semacon mb-2 flex items-start gap-1">
+                                <i data-lucide="user" class="w-4 h-4 flex-shrink-0 mt-0.5"></i>
+                                <span>${item.speaker}</span>
+                            </p>
+                        ` : ''}
+
+                        <p class="text-xs text-semacon-charcoal leading-relaxed border-t border-gray-100 pt-3 mt-2">
+                            ${item.description}
+                        </p>
+                    </div>
+                `;
+                container.innerHTML += cardHtml;
+            });
+
+            lucide.createIcons();
+        }
+
+        function switchDay(dayKey) {
+            currentActiveDay = dayKey;
+            
+            // Update UI buttons
+            document.querySelectorAll('.day-tab').forEach(btn => {
+                btn.classList.remove('bg-semacon', 'text-white', 'shadow-editorial-sm');
+                btn.classList.add('bg-white', 'text-semacon-darkslate');
+            });
+
+            const activeBtn = document.getElementById(`tab-${dayKey}`);
+            if(activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-semacon-darkslate');
+                activeBtn.classList.add('bg-semacon', 'text-white', 'shadow-editorial-sm');
+            }
+
+            renderSchedule();
+        }
+
+        function filterType(type) {
+            currentFilterType = type;
+            renderSchedule();
+        }
+
+        function renderSpeakers() {
+            const grid = document.getElementById('speakers-grid');
+            grid.innerHTML = '';
+
+            speakersData.forEach(sp => {
+                const card = `
+                    <div class="bg-white border-2 border-black p-6 shadow-editorial flex flex-col justify-between group hover:-translate-y-1 transition-all">
+                        <div>
+                            <div class="w-20 h-20 bg-semacon-paper border-2 border-black rounded-full overflow-hidden mb-4 flex items-center justify-center font-serif font-black text-2xl text-semacon border border-black shadow-editorial-sm">
+                                ${sp.name.split(' ').map(n=>n[0]).slice(0,2).join('')}
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-semacon-darkslate group-hover:text-semacon transition-colors">${sp.name}</h3>
+                            <p class="text-xs font-bold text-semacon uppercase mt-0.5">${sp.role}</p>
+                            <p class="text-[11px] text-semacon-charcoal font-medium uppercase tracking-wider mb-3">${sp.institution}</p>
+                            
+                            <p class="text-xs text-semacon-darkslate italic line-clamp-2 border-l-2 border-semacon pl-2 my-2 bg-semacon-soft/50 py-1">
+                                "${sp.topic}"
+                            </p>
+                        </div>
+
+                        <button onclick="openSpeakerModal('${sp.id}')" class="mt-4 w-full bg-semacon-paper text-semacon-darkslate hover:bg-semacon hover:text-white text-xs font-bold uppercase tracking-wider py-2.5 border border-black transition-colors flex items-center justify-center gap-2">
+                            <span>Saiba Mais</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+
+            lucide.createIcons();
+        }
+
+        function openSpeakerModal(id) {
+            const sp = speakersData.find(s => s.id === id);
+            if(!sp) return;
+
+            document.getElementById('modal-avatar').innerText = sp.name.split(' ').map(n=>n[0]).slice(0,2).join('');
+            document.getElementById('modal-name').innerText = sp.name;
+            document.getElementById('modal-role').innerText = sp.role;
+            document.getElementById('modal-institution').innerText = sp.institution;
+            document.getElementById('modal-topic').innerText = `"${sp.topic}"`;
+            document.getElementById('modal-bio').innerText = sp.bio;
+
+            document.getElementById('speaker-modal').classList.remove('hidden');
+            document.body.classList.add('modal-active');
+            lucide.createIcons();
+        }
+
+        function closeSpeakerModal() {
+            document.getElementById('speaker-modal').classList.add('hidden');
+            document.body.classList.remove('modal-active');
+        }
+
+        function toggleFaq(index) {
+            const ans = document.getElementById(`faq-ans-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            if(ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                ans.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        function checkCertificate() {
+            const input = document.getElementById('cert-input').value.trim();
+            const result = document.getElementById('cert-result');
+            
+            if(!input) {
+                result.innerText = "Por favor, informe seu CPF ou código de inscrição.";
+                result.classList.remove('hidden');
+                return;
+            }
+
+            result.innerText = "Os certificados serão liberados para emissão e download após o encerramento do evento (07/11/2026).";
+            result.classList.remove('hidden');
+        }
+
+        // Mobile Menu Script
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Initialize on Window Load
+        window.onload = function() {
+            lucide.createIcons();
+            renderSchedule();
+            renderSpeakers();
+        };
+    </script>
+</body>
+</html>
