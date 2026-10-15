@@ -1171,7 +1171,19 @@
             const container = document.getElementById('schedule-container');
             container.innerHTML = '';
 
-            const dayItems = scheduleData[currentActiveDay] || [];
+            let dayItems = [];
+            if (currentActiveDay === 'geral') {
+                // Junta todos os dias e adiciona uma etiqueta para identificar o dia na visão geral
+                dayItems = [
+                    ...(scheduleData.terca || []).map(i => ({...i, dayLabel: "TERÇA • 03/11"})),
+                    ...(scheduleData.quarta || []).map(i => ({...i, dayLabel: "QUARTA • 04/11"})),
+                    ...(scheduleData.quinta || []).map(i => ({...i, dayLabel: "QUINTA • 05/11"})),
+                    ...(scheduleData.sexta || []).map(i => ({...i, dayLabel: "SEXTA • 06/11"})),
+                    ...(scheduleData.sabado || []).map(i => ({...i, dayLabel: "SÁBADO • 07/11"}))
+                ];
+            } else {
+                dayItems = scheduleData[currentActiveDay] || [];
+            }
             
             const filteredItems = dayItems.filter(item => {
                 if (currentFilterType === 'ALL') return true;
@@ -1198,7 +1210,8 @@
                 const cardHtml = `
                     <div class="bg-white border-2 border-black p-6 shadow-editorial hover:translate-x-1 transition-transform relative">
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
-                            <div class="flex items-center gap-3">
+                            <div class="flex items-center flex-wrap gap-3">
+                                ${item.dayLabel ? `<span class="bg-semacon-darkslate text-white text-[11px] font-bold px-2.5 py-1 border border-black tracking-wider uppercase">${item.dayLabel}</span>` : ''}
                                 <span class="bg-semacon-soft text-semacon font-serif font-black text-sm px-3 py-1 border border-semacon-light flex items-center gap-1.5">
                                     <i data-lucide="clock" class="w-4 h-4"></i> ${item.time}
                                 </span>
@@ -1206,10 +1219,6 @@
                                     ${item.type}
                                 </span>
                             </div>
-                            <span class="text-xs font-semibold text-semacon-charcoal flex items-center gap-1">
-                                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-semacon"></i> ${item.location}
-                            </span>
-                        </div>
 
                         <h3 class="font-serif font-extrabold text-xl text-semacon-darkslate mb-2">
                             ${item.title}
