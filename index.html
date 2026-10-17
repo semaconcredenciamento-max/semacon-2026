@@ -1133,12 +1133,14 @@
                 bio: "Especialista em contabilidade pública e auditoria governamental, focada na fiscalização e melhoria dos gastos públicos no Acre."
             },
             {
-                id: "oleides-oliveira",
-                name: "Prof.ª Dra. Oleides Francisca de Oliveira",
+                id: "oleide-oliveira",
+                name: "Prof.ª Dra. Oleide Francisca de Oliveira",
                 role: "Professora Pesquisadora",
                 institution: "Universidade Federal do Acre (UFAC)",
                 topic: "O Futuro da Profissão Contábil e Formação Acadêmica",
-                bio: "Doutora e docente do curso de Ciências Contábeis da UFAC, com vasta produção científica voltada à educação contábil e teoria da contabilidade."
+                bio: "Doutora e docente do curso de Ciências Contábeis da UFAC, com vasta produção científica voltada à educação contábil e teoria da contabilidade.",
+                image: "oleides.jpeg",
+                instagram: "https://www.instagram.com/leidyoleides"
             },
             {
                 id: "marconde-silva",
@@ -1256,17 +1258,31 @@
             grid.innerHTML = '';
 
             speakersData.forEach(sp => {
+                // Exibe imagem se existir; caso contrário, exibe as iniciais
+                const avatarHtml = sp.image 
+                    ? `<img src="${sp.image}" alt="${sp.name}" class="w-full h-full object-cover">`
+                    : sp.name.split(' ').map(n=>n[0]).slice(0,2).join('');
+
+                // Exibe tag do Instagram se houver link
+                const instagramHtml = sp.instagram
+                    ? `<a href="${sp.instagram}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-semacon hover:text-semacon-dark font-bold mt-2 bg-semacon-soft px-2.5 py-1 border border-semacon-light rounded transition-colors">
+                        <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+                        <span>Instagram</span>
+                       </a>`
+                    : '';
+
                 const card = `
                     <div class="bg-white border-2 border-black p-6 shadow-editorial flex flex-col justify-between group hover:-translate-y-1 transition-all">
                         <div>
-                            <div class="w-20 h-20 bg-semacon-paper border-2 border-black rounded-full overflow-hidden mb-4 flex items-center justify-center font-serif font-black text-2xl text-semacon border border-black shadow-editorial-sm">
-                                ${sp.name.split(' ').map(n=>n[0]).slice(0,2).join('')}
+                            <div class="w-20 h-20 bg-semacon-paper border-2 border-black rounded-full overflow-hidden mb-4 flex items-center justify-center font-serif font-black text-2xl text-semacon shadow-editorial-sm">
+                                ${avatarHtml}
                             </div>
                             <h3 class="font-serif font-bold text-xl text-semacon-darkslate group-hover:text-semacon transition-colors">${sp.name}</h3>
                             <p class="text-xs font-bold text-semacon uppercase mt-0.5">${sp.role}</p>
-                            <p class="text-[11px] text-semacon-charcoal font-medium uppercase tracking-wider mb-3">${sp.institution}</p>
+                            <p class="text-[11px] text-semacon-charcoal font-medium uppercase tracking-wider mb-1">${sp.institution}</p>
+                            ${instagramHtml}
                             
-                            <p class="text-xs text-semacon-darkslate italic line-clamp-2 border-l-2 border-semacon pl-2 my-2 bg-semacon-soft/50 py-1">
+                            <p class="text-xs text-semacon-darkslate italic line-clamp-2 border-l-2 border-semacon pl-2 my-3 bg-semacon-soft/50 py-1">
                                 "${sp.topic}"
                             </p>
                         </div>
@@ -1287,7 +1303,13 @@
             const sp = speakersData.find(s => s.id === id);
             if(!sp) return;
 
-            document.getElementById('modal-avatar').innerText = sp.name.split(' ').map(n=>n[0]).slice(0,2).join('');
+            const modalAvatar = document.getElementById('modal-avatar');
+            if (sp.image) {
+                modalAvatar.innerHTML = `<img src="${sp.image}" alt="${sp.name}" class="w-full h-full object-cover">`;
+            } else {
+                modalAvatar.innerText = sp.name.split(' ').map(n=>n[0]).slice(0,2).join('');
+            }
+
             document.getElementById('modal-name').innerText = sp.name;
             document.getElementById('modal-role').innerText = sp.role;
             document.getElementById('modal-institution').innerText = sp.institution;
