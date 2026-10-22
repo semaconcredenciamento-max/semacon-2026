@@ -556,42 +556,53 @@
         </div>
     </div>
 
-    <!-- ARTIST DETAILS MODAL -->
-    <div id="artist-modal" class="fixed inset-0 z-50 hidden flex items-end sm:items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-        <div class="bg-white border-2 border-black max-w-sm w-full shadow-editorial relative overflow-hidden animate-slide-up">
+    <!-- ARTIST DETAILS MODAL (STORIES STYLE) -->
+    <div id="artist-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div class="border-2 border-black max-w-sm w-full h-[560px] shadow-editorial relative overflow-hidden animate-slide-up flex flex-col justify-between bg-semacon-darkslate">
             
-            <!-- Header do Modal -->
-            <div class="bg-semacon-darkslate text-white px-4 py-3 flex items-center justify-between border-b border-black">
-                <span class="font-serif font-bold text-xs uppercase tracking-wider text-semacon-light">Atração Cultural</span>
-                <button onclick="closeArtistModal()" class="text-white hover:text-semacon-light p-1">
-                    <i data-lucide="x" class="w-5 h-5"></i>
+            <!-- Imagem de Fundo (Preenchimento Total tipo Story) -->
+            <div id="artist-modal-bg" class="absolute inset-0 w-full h-full flex items-center justify-center text-semacon-light font-serif font-black text-6xl select-none">
+                <!-- Se tiver foto, a <img> entra aqui via JS -->
+            </div>
+
+            <!-- Gradiente de Contraste (Transparente no topo, escuro na base para leitura) -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30 pointer-events-none z-0"></div>
+
+            <!-- Header do Modal (Fixo no Topo) -->
+            <div class="relative z-10 p-4 flex items-center justify-between">
+                <span class="bg-semacon text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 border border-black shadow-editorial-sm">Atração Cultural</span>
+                <button onclick="closeArtistModal()" class="w-8 h-8 rounded-full bg-black/60 text-white hover:bg-semacon transition-colors flex items-center justify-center border border-white/20 backdrop-blur-sm">
+                    <i data-lucide="x" class="w-4 h-4"></i>
                 </button>
             </div>
             
-            <!-- Corpo do Modal -->
-            <div class="p-6 text-center">
-                <div class="w-28 h-28 mx-auto bg-semacon-paper border-2 border-black rounded-full overflow-hidden mb-4 shadow-editorial-sm flex items-center justify-center font-serif text-4xl text-semacon font-black" id="artist-modal-avatar">
-                    <!-- Avatar inserido via JS -->
+            <!-- Legenda e Informações (Sobrepostos na Parte Inferior) -->
+            <div class="relative z-10 p-6 space-y-3">
+                
+                <div>
+                    <span id="artist-modal-role" class="text-[11px] font-bold text-semacon-light uppercase tracking-widest block mb-1"></span>
+                    <h3 id="artist-modal-name" class="font-serif font-black text-2xl text-white leading-tight drop-shadow-md"></h3>
                 </div>
                 
-                <h3 id="artist-modal-name" class="font-serif font-extrabold text-2xl text-semacon-darkslate leading-tight mb-1"></h3>
-                <p id="artist-modal-role" class="text-[11px] font-bold text-semacon uppercase tracking-widest mb-4"></p>
-                
-                <div class="bg-semacon-soft/50 border border-semacon-light p-4 text-sm text-semacon-charcoal italic leading-relaxed mb-6" id="artist-modal-release">
+                <!-- Caixa de Texto da Legenda -->
+                <div class="bg-black/50 backdrop-blur-md border-l-2 border-semacon p-3.5 text-xs text-white/90 italic leading-relaxed shadow-sm" id="artist-modal-release">
                     <!-- Release inserido via JS -->
                 </div>
 
-                <div class="flex flex-col sm:flex-row gap-2 w-full mt-2">
-                    <a id="artist-modal-instagram1" href="#" target="_blank" class="hidden flex-1 items-center justify-center gap-2 bg-semacon text-white text-xs font-bold uppercase tracking-wider py-3 border border-black hover:bg-semacon-dark transition-colors shadow-editorial-sm hover:translate-y-[1px] hover:shadow-none">
+                <!-- Botões de Instagram -->
+                <div class="flex flex-col sm:flex-row gap-2 w-full pt-1">
+                    <a id="artist-modal-instagram1" href="#" target="_blank" class="hidden flex-1 items-center justify-center gap-2 bg-semacon text-white text-xs font-bold uppercase tracking-wider py-3 border border-black hover:bg-semacon-dark transition-colors shadow-editorial-sm">
                         <i data-lucide="instagram" class="w-4 h-4"></i>
                         <span>Instagram 1</span>
                     </a>
-                    <a id="artist-modal-instagram2" href="#" target="_blank" class="hidden flex-1 items-center justify-center gap-2 bg-semacon-darkslate text-white text-xs font-bold uppercase tracking-wider py-3 border border-black hover:bg-black transition-colors shadow-editorial-sm hover:translate-y-[1px] hover:shadow-none">
+                    <a id="artist-modal-instagram2" href="#" target="_blank" class="hidden flex-1 items-center justify-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider py-3 border border-white/40 hover:bg-white/30 transition-colors shadow-editorial-sm">
                         <i data-lucide="instagram" class="w-4 h-4"></i>
                         <span>Instagram 2</span>
                     </a>
                 </div>
-            </div> <!-- Essa é a tag que estava faltando! -->
+
+            </div>
+
         </div>
     </div>
 
@@ -1326,11 +1337,14 @@
             const art = artistsData.find(a => a.id === id);
             if(!art) return;
 
-            const modalAvatar = document.getElementById('artist-modal-avatar');
+            const modalBg = document.getElementById('artist-modal-bg');
             if (art.image) {
-                modalAvatar.innerHTML = `<img src="${art.image}" alt="${art.name}" class="w-full h-full object-cover">`;
+                modalBg.innerHTML = `<img src="${art.image}" alt="${art.name}" class="w-full h-full object-cover">`;
+                modalBg.classList.remove('opacity-30');
             } else {
-                modalAvatar.innerText = art.name.split(' ').map(n=>n[0]).slice(0,2).join('');
+                const initials = art.name.split(' ').map(n=>n[0]).slice(0,2).join('');
+                modalBg.innerHTML = initials;
+                modalBg.classList.add('opacity-30');
             }
 
             document.getElementById('artist-modal-name').innerText = art.name;
@@ -1340,7 +1354,7 @@
             const igBtn1 = document.getElementById('artist-modal-instagram1');
             const igBtn2 = document.getElementById('artist-modal-instagram2');
 
-            // Controla o Instagram 1 
+            // Controla o Instagram 1
             const link1 = art.instagram1 || art.instagram;
             if (link1) {
                 igBtn1.href = link1;
