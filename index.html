@@ -93,6 +93,14 @@
         .modal-active {
             overflow: hidden;
         }
+        /* Estilos para ocultar a barra de rolagem no feed de stories e animar o modal */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .animate-slide-up { animation: slideUp 0.3s ease-out forwards; }
+        @keyframes slideUp { 
+            from { opacity: 0; transform: translateY(20px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
     </style>
 </head>
 <body class="paper-texture antialiased selection:bg-semacon selection:text-white">
@@ -548,6 +556,39 @@
         </div>
     </div>
 
+    <!-- ARTIST DETAILS MODAL -->
+    <div id="artist-modal" class="fixed inset-0 z-50 hidden flex items-end sm:items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+        <div class="bg-white border-2 border-black max-w-sm w-full shadow-editorial relative overflow-hidden animate-slide-up">
+            
+            <!-- Header do Modal -->
+            <div class="bg-semacon-darkslate text-white px-4 py-3 flex items-center justify-between border-b border-black">
+                <span class="font-serif font-bold text-xs uppercase tracking-wider text-semacon-light">Atração Cultural</span>
+                <button onclick="closeArtistModal()" class="text-white hover:text-semacon-light p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <!-- Corpo do Modal -->
+            <div class="p-6 text-center">
+                <div class="w-28 h-28 mx-auto bg-semacon-paper border-2 border-black rounded-full overflow-hidden mb-4 shadow-editorial-sm flex items-center justify-center font-serif text-4xl text-semacon font-black" id="artist-modal-avatar">
+                    <!-- Avatar inserido via JS -->
+                </div>
+                
+                <h3 id="artist-modal-name" class="font-serif font-extrabold text-2xl text-semacon-darkslate leading-tight mb-1"></h3>
+                <p id="artist-modal-role" class="text-[11px] font-bold text-semacon uppercase tracking-widest mb-4"></p>
+                
+                <div class="bg-semacon-soft/50 border border-semacon-light p-4 text-sm text-semacon-charcoal italic leading-relaxed mb-6" id="artist-modal-release">
+                    <!-- Release inserido via JS -->
+                </div>
+
+                <a id="artist-modal-instagram" href="#" target="_blank" class="hidden inline-flex items-center justify-center gap-2 w-full bg-semacon text-white text-xs font-bold uppercase tracking-wider py-3 border border-black hover:bg-semacon-dark transition-colors shadow-editorial-sm hover:translate-y-[1px] hover:shadow-none">
+                    <i data-lucide="instagram" class="w-4 h-4"></i>
+                    <span>Ver no Instagram</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- EXPERIÊNCIAS & OFICINAS DO SÁBADO -->
     <section id="oficinas" class="py-20 bg-semacon-paper border-b border-black/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -647,6 +688,28 @@
                     </div>
                 </div>
 
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ARTISTAS E CONVIDADOS (STORIES FEED) -->
+    <section id="artistas" class="py-16 bg-white border-b border-black/10 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-8">
+                <span class="text-xs font-bold uppercase tracking-widest text-semacon block mb-1">CULTURA E ENTRETENIMENTO</span>
+                <h2 class="font-serif text-3xl font-extrabold text-semacon-darkslate">
+                    Artistas e Convidados
+                </h2>
+                <p class="text-sm text-semacon-charcoal mt-2 max-w-2xl mx-auto">
+                    Apresentações culturais que enriquecem nossa Semana Acadêmica. Clique nos perfis para saber mais.
+                </p>
+            </div>
+            
+            <!-- Stories Feed Container -->
+            <div class="flex overflow-x-auto gap-4 sm:gap-6 pb-6 pt-4 hide-scrollbar items-start md:justify-center px-4" id="artists-feed">
+                <!-- Inserção Dinâmica via JS -->
             </div>
 
         </div>
@@ -1158,6 +1221,135 @@
             },
         ];
 
+        // Artists & Guests Dataset
+        const artistsData = [
+            {
+                id: "alcineia",
+                name: "Alcineia Galdino",
+                role: "Cantora",
+                image: "", // Nome do arquivo. ex: "alcineia.jpg"
+                instagram: "",
+                release: "Apresentação musical com um repertório especial para enriquecer as solenidades do evento."
+            },
+            {
+                id: "andre-ana",
+                name: "André e Ana Meire",
+                role: "Dançarinos",
+                image: "",
+                instagram: "",
+                release: "Apresentação coreográfica trazendo sincronia, ritmo e expressão corporal para o palco da SEMACON."
+            },
+            {
+                id: "thiago-jessica",
+                name: "Thiago e Jéssica",
+                role: "Dançarinos",
+                image: "",
+                instagram: "",
+                release: "Uma performance de dança envolvente, destacando a técnica e a harmonia artística em dupla."
+            },
+            {
+                id: "coral-ufac",
+                name: "Coral da UFAC",
+                role: "Cantores",
+                image: "",
+                instagram: "",
+                release: "O grupo vocal da universidade trará arranjos harmônicos emocionantes em uma apresentação institucional marcante."
+            },
+            {
+                id: "no-compasso",
+                name: "Studio No Compasso",
+                role: "Dança",
+                image: "",
+                instagram: "",
+                release: "Com direção coreográfica de excelência, o Studio de Dança No Compasso apresenta um espetáculo de dança de salão celebrando ritmos como forró, samba e bolero."
+            },
+            {
+                id: "victor-parceira",
+                name: "Victor e Parceira",
+                role: "Dança",
+                image: "",
+                instagram: "",
+                release: "Apresentação técnica de dança a dois, com coreografia elaborada para encantar o público universitário."
+            },
+            {
+                id: "fabiano-lohanny",
+                name: "Fabiano e Lohanny",
+                role: "Dança",
+                image: "",
+                instagram: "",
+                release: "Trazendo elegância e muito balanço, a dupla apresenta uma performance especial de dança de salão desenhada para o evento."
+            },
+            {
+                id: "rafael-barbosa",
+                name: "Rafael Barbosa",
+                role: "Stand-Up",
+                image: "",
+                instagram: "",
+                release: "Show de humor descontraído abordando as peripécias da vida acadêmica e os bastidores divertidos da contabilidade."
+            }
+        ];
+
+        function renderArtists() {
+            const container = document.getElementById('artists-feed');
+            container.innerHTML = '';
+
+            artistsData.forEach(art => {
+                const initials = art.name.split(' ').map(n=>n[0]).slice(0,2).join('');
+                const avatarContent = art.image 
+                    ? `<img src="${art.image}" alt="${art.name}" class="w-full h-full object-cover">` 
+                    : initials;
+
+                const storyHtml = `
+                    <div class="flex flex-col items-center flex-shrink-0 snap-center group cursor-pointer w-[90px]" onclick="openArtistModal('${art.id}')">
+                        <div class="w-20 h-20 rounded-full bg-white border-[3px] border-semacon p-1 mb-2 group-hover:scale-105 transition-transform shadow-sm">
+                            <div class="w-full h-full rounded-full bg-semacon-paper overflow-hidden flex items-center justify-center font-serif font-black text-2xl text-semacon border border-black/10">
+                                ${avatarContent}
+                            </div>
+                        </div>
+                        <span class="text-[11px] font-bold text-semacon-darkslate text-center leading-tight group-hover:text-semacon transition-colors break-words w-full">${art.name}</span>
+                        <span class="text-[9px] font-bold text-semacon-charcoal uppercase tracking-wider mt-1">${art.role}</span>
+                    </div>
+                `;
+                container.innerHTML += storyHtml;
+            });
+            lucide.createIcons();
+        }
+
+        function openArtistModal(id) {
+            const art = artistsData.find(a => a.id === id);
+            if(!art) return;
+
+            const modalAvatar = document.getElementById('artist-modal-avatar');
+            if (art.image) {
+                modalAvatar.innerHTML = `<img src="${art.image}" alt="${art.name}" class="w-full h-full object-cover">`;
+            } else {
+                modalAvatar.innerText = art.name.split(' ').map(n=>n[0]).slice(0,2).join('');
+            }
+
+            document.getElementById('artist-modal-name').innerText = art.name;
+            document.getElementById('artist-modal-role').innerText = art.role;
+            document.getElementById('artist-modal-release').innerText = `"${art.release}"`;
+
+            const igBtn = document.getElementById('artist-modal-instagram');
+            if (art.instagram) {
+                igBtn.href = art.instagram;
+                igBtn.classList.remove('hidden');
+                igBtn.classList.add('inline-flex');
+            } else {
+                igBtn.classList.add('hidden');
+                igBtn.classList.remove('inline-flex');
+            }
+
+            document.getElementById('artist-modal').classList.remove('hidden');
+            document.body.classList.add('modal-active');
+            lucide.createIcons();
+        }
+
+        function closeArtistModal() {
+            document.getElementById('artist-modal').classList.add('hidden');
+            document.body.classList.remove('modal-active');
+        }
+
         let currentActiveDay = 'terca';
         let currentFilterType = 'ALL';
 
@@ -1374,10 +1566,11 @@
         });
 
         // Initialize on Window Load
-        window.onload = function() {
+       window.onload = function() {
             lucide.createIcons();
             renderSchedule();
             renderSpeakers();
+            renderArtists(); // Adicione esta linha!
         };
     </script>
 </body>
