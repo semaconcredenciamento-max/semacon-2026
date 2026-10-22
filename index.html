@@ -1389,6 +1389,11 @@
             lucide.createIcons();
         }
 
+        function closeArtistModal() {
+            document.getElementById('artist-modal').classList.add('hidden');
+            document.body.classList.remove('modal-active');
+        }
+
         let currentActiveDay = 'terca';
         let currentFilterType = 'ALL';
 
