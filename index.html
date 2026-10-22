@@ -1249,7 +1249,7 @@
                 id: "thiago-jessica",
                 name: "Thiago e Jéssica",
                 role: "Dançarinos",
-                image: "thiago&jessica.jpeg",
+                image: "thiagojessica.jpeg",
                 instagram: "https://www.instagram.com/thiagocordeiroac",
                 instagram2: "https://www.instagram.com/jessica_nunes.mat",
                 release: "Uma performance de dança envolvente, destacando a técnica e a harmonia artística em dupla."
@@ -1337,14 +1337,28 @@
             document.getElementById('artist-modal-role').innerText = art.role;
             document.getElementById('artist-modal-release').innerText = `"${art.release}"`;
 
-            const igBtn = document.getElementById('artist-modal-instagram');
-            if (art.instagram) {
-                igBtn.href = art.instagram;
-                igBtn.classList.remove('hidden');
-                igBtn.classList.add('inline-flex');
+            const igBtn1 = document.getElementById('artist-modal-instagram1');
+            const igBtn2 = document.getElementById('artist-modal-instagram2');
+
+            // Controla o Instagram 1 
+            const link1 = art.instagram1 || art.instagram;
+            if (link1) {
+                igBtn1.href = link1;
+                igBtn1.classList.remove('hidden');
+                igBtn1.classList.add('inline-flex');
             } else {
-                igBtn.classList.add('hidden');
-                igBtn.classList.remove('inline-flex');
+                igBtn1.classList.add('hidden');
+                igBtn1.classList.remove('inline-flex');
+            }
+
+            // Controla o Instagram 2
+            if (art.instagram2) {
+                igBtn2.href = art.instagram2;
+                igBtn2.classList.remove('hidden');
+                igBtn2.classList.add('inline-flex');
+            } else {
+                igBtn2.classList.add('hidden');
+                igBtn2.classList.remove('inline-flex');
             }
 
             document.getElementById('artist-modal').classList.remove('hidden');
