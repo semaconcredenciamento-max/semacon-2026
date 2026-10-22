@@ -1359,10 +1359,12 @@
             const igBtn1 = document.getElementById('artist-modal-instagram1');
             const igBtn2 = document.getElementById('artist-modal-instagram2');
 
-            // Controla o Instagram 1
+            // Controla o Instagram 1 (Atualiza o link e o nome do botão)
             const link1 = art.instagram1 || art.instagram;
             if (link1) {
                 igBtn1.href = link1;
+                const span1 = igBtn1.querySelector('span');
+                if (span1) span1.innerText = art.instagram1Label || "Instagram 1";
                 igBtn1.classList.remove('hidden');
                 igBtn1.classList.add('inline-flex');
             } else {
@@ -1370,9 +1372,11 @@
                 igBtn1.classList.remove('inline-flex');
             }
 
-            // Controla o Instagram 2
+            // Controla o Instagram 2 (Atualiza o link e o nome do botão)
             if (art.instagram2) {
                 igBtn2.href = art.instagram2;
+                const span2 = igBtn2.querySelector('span');
+                if (span2) span2.innerText = art.instagram2Label || "Instagram 2";
                 igBtn2.classList.remove('hidden');
                 igBtn2.classList.add('inline-flex');
             } else {
@@ -1383,11 +1387,6 @@
             document.getElementById('artist-modal').classList.remove('hidden');
             document.body.classList.add('modal-active');
             lucide.createIcons();
-        }
-
-        function closeArtistModal() {
-            document.getElementById('artist-modal').classList.add('hidden');
-            document.body.classList.remove('modal-active');
         }
 
         let currentActiveDay = 'terca';
